@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+:root {
+    --grey: hsl(0, 0%, 18.82%);
+    --light-blue: rgb(65, 166, 255);
+    --popup-width: 200px; 
+    --popup-height: 500px;
+    --light-grey: hsl(0, 0%, 23.82%);
+    --dark-grey: hsl(0, 0%, 11.82%);
+    --red: #CC0000;
+}
+
+
+* {
+    font-family: sans-serif;
+}
+
+html {
+    animation: spin 3s linear;
+}
+
+
+body {
+    background-color: var(--dark-grey);
+    color: white;
+}
+
+p {
+    color: white;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 25%;
+        padding-right: 25%;
+        text-align: center;
+}
+
+::-webkit-resizer {
+    cursor: row-resize;
+}
+
+::-webkit-resizer:hover {
+    cursor: row-resize;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--dark-grey);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(185, 185, 185);
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--light-grey)
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: hsl(0, 0%, 13.82%)
+  }
+
+.nav-bar {
+    height: 50px;
+    width: 100%;
+    background-color: hsl(0, 0%, 21.82%);  
+    position: absolute;   
+    margin-left: 0;
+    margin-right: 0;
+    top: 0;
+    left: 0;
+
+
+    
+
+}
+
+.nav-options {
+color: white;   
+
+float: right; 
+top: 30px !important; 
+height: 30px;
+border-bottom: 3px solid transparent;
+
+margin-left: 20px;  
+margin-right: 20px;  
+margin-top: 13px;
+
+
+text-decoration: none;  
+overflow-x: hidden !important;
+font-family: Arial;
+transition: 0.4s;
+font-size: 1.2rem; 
+
+}
+
+.nav-options:hover {
+
+}
+
+#home::before {
+    content: url("home.svg");
+     position: absolute;
+top: 11px;
+right: 140px; 
+}   
+
+#home:hover::before {
+    border-bottom: 3px solid var(--light-blue);
+}
+
+#home::after {
+content: "Home";
+position: absolute;
+border: none;
+background-color: var(--grey);
+color: white;
+right: 120px;
+top: 50px;
+padding: 6px 12px;
+font-size: 0.75em;
+height: 20px;
+transform: scale(0);
+transition: 0.4s;
+border-radius: 6px;
+}
+
+
+#home:hover::after {
+transform: scale(1);
+}
+
+
+#about::before {
+    content: url("user.svg");   
+    position: absolute;
+    top: 11px;
+    right: 350px;
+}   
+
+#about:hover::before {
+    border-bottom: 3px solid var(--light-blue);
+}
+#about::after {
+    content: "About";
+    position: absolute;
+    border: none;
+    background-color: var(--grey);
+    color: white;
+    right: 330px;
+    top: 50px;
+    padding: 6px 12px;
+    font-size: 0.75em;
+    height: 20px;
+    transform: scale(0);
+    transition: 0.5s;
+    border-radius: 6px;
+    }
+    
+    
+    #about:hover::after {
+    transform: scale(1);
+    }
+
+
+
+#help::before {
+    content: url("help-circle.svg");
+    position: absolute;
+    top: 11px;
+    right: 550px;
+}   
+
+#help:hover::before {
+    border-bottom: 3px solid var(--light-blue);
+}
+
+#help::after {
+    content: "Help";
+    position: absolute;
+    border: none;
+    background-color: var(--grey);
+    color: white;
+    right: 535px;
+    top: 50px;
+    padding: 6px 12px;
+    font-size: 0.75em;
+    height: 20px;
+    transform: scale(0);
+    transition: 0.5s;
+    border-radius: 6px;
+    }
+    
+    
+    #help:hover::after {
+    transform: scale(1);
+    }
+
+#minimize {
+    position: absolute;
+    top: 6px; 
+    left: 8px;
+}
+
+#minimize:hover {
+    cursor: pointer;
+}
+
+
+.avatar {
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    right: 0px;
+    margin-right: 3px;
+    margin-top: 4px;
+    border: 1px solid transparent;
+}
+
+.avatar:hover {
+cursor: pointer;
+    }
+
+.avatar:active {
+border: 1px solid var(--light-blue);
+}
+
+.pop-up {
+
+    background-color: rgba(56, 56, 56, 0.8);
+
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    z-index: 1001;
+
+    width: 200px; 
+    height: 500px; 
+
+
+    visibility: hidden;
+    border: 1px solid var(--light-grey);
+    border-radius: 3px;
+    font-size: 1.3em;
+    overflow-y: scroll;
+    overflow-x: unset;
+    resize: vertical;
+
+}
+
+.popup-options {
+    background-color: transparent;
+    width: var(--popup-width);
+    min-height: 50px;
+    border: none;
+    color: white;
+    padding: 0px 0px;
+    transition: 0.3s;
+    position: relative;
+
+
+}
+
+.popup-options:hover {
+    background-color:hsl(0, 0%, 25.82%);
+    cursor: pointer;
+}
+
+#color-mode::before {
+    content: url("sun.svg");
+    position: absolute;
+    left: 5px;
+    top: 12px;
+}
+
+
+.header {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    padding: 0px 12px;
+    border-radius: 10px;
+    transition: ease 0.3s;
+    width: 700px;   
+    user-select: none;
+    font-size: 3.7rem;
+    background-color: var(--light-blue); 
+    opacity: 0.8; 
+
+}
+
+.header:hover {
+    cursor: default;
+    box-shadow: 5px 5px 5px var(--light-blue);
+    background-color: var(--light-blue);
+    opacity: 1;
+    transform: scale(1.05)
+}
+
+
+
+.h2 {
+    color: white;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 25%;
+        padding-right: 25%;
+        text-align: center;
+        transition: ease 0.4s;
+        border-radius: 10px;
+        padding: 0px 12px;
+        width: 200px;
+        user-select: none;  
+        font-size: 1.5em; 
+        background-color: var(--red); 
+        opacity: 0.8; 
+}
+
+.h2:hover {
+    background-color: var(--red);
+    cursor: default;
+    transform: scale(1.07);
+    box-shadow: 4px 4px 4px var(--red);
+    opacity: 1;
+}
+
+.about-container {
+    background-color: var(--dark-grey)
+}
+
+#home-header {
+    background-color: none !important;
+    font-family: 'Orbitron' !important;
+    font-weight: 600;
+    font-size: 7rem;
+    color:rgb(65, 166, 255);
+    user-select: none;
+    animation: steps ease-in-out 1.5s;
+    transition: border-bottom ease 3.5s;
+    position: absolute;
+    left: 5%;
+    margin-left: none;
+    padding: 0px 24px;
+    border: 5px solid transparent;
+
+}
+
+@keyframes steps {
+
+0% {
+        opacity: 0;
+    }
+
+50%{
+        opacity: 1;
+        border: 5px solid currentColor;
+        
+    }   
+
+    100%{
+        border: 5px solid transparent;
+    }   
+
+
+}
+
+.side-popup {
+    transform: translateX(75px)
+}
+
+@keyframes open {
+
+    from {
+        height: 0
+    }
+
+    to {
+        height: var(--popup-height)
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
