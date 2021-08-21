@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>tron975 | Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id = "body" onclick = "document.getElementById('pop-up').style.display = ''">
+<div class = "nav-bar" id = "nav-bar">
+    <div class = "nav-options"></div>
+<a class = "nav-options" id = "home"></a>
+<a href = "/about.html" class = "nav-options" id = "about"></a>
+<a href = "/help.html" class = "nav-options" id = "help"></a>
+<img src = "favicon.ico" , class = "avatar"></img>  
+<img src = "minimize.svg" id = "minimize"></img>
+
+
+    <div class = "pop-up" id = "pop-up">
+    <!--<div id = "change-theme"></div> -->
+    <button class = "popup-options" id = "color-mode">Enable Light Mode</button>
+<!-- <button class = "side-popup" id = "dark">Dark</button>
+<button class = "side-popup" id = "color-mode"  id = "light" onclick = "light()">Light</button> 
+<button class = "popup-options" id = "color-mode" onclick = "light()">Change Theme ></button> -->
+
+
+</div>
+
+</div>
+<br><br><br>
+<h1 id = "home-header">TRON975</h1>
+
+        <script src = "script.js">
+        if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js");
+      }
+</script>
+</body>
+</html>
