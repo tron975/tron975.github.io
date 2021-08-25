@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
+@media (prefers-color-scheme: dark) {
+    :root {
+      --dark-grey: (0, 0%, 11.82%)
+    }
+  }
+
 :root {
     --grey: hsl(0, 0%, 18.82%);
     --light-blue: rgb(65, 166, 255);
@@ -9,11 +15,14 @@
     --dark-grey: hsl(0, 0%, 11.82%);
     --red: #CC0000;
     --nav-bar-height: 50px;
+    --transform: rotate(0deg);
+    --sun: url("https://cdn.artofproblemsolving.com/attachments/0/9/79aee59ea5d8a7b2d56ed5542c88ed65b3dcb5.png");
 }
 
 
 * {
     font-family: sans-serif;
+    user-select: none;
 }
 
 html {
@@ -282,12 +291,6 @@ border: 1px solid var(--light-blue);
     cursor: pointer;
 }
 
-#color-mode::before {
-    content: url("sun.svg");
-    position: absolute;
-    left: 5px;
-    top: 12px;
-}
 
 
 .header {
@@ -362,7 +365,9 @@ border: 1px solid var(--light-blue);
     padding: 0px 24px;
     border: 5px solid transparent;
 
+
 }
+
 
 @keyframes steps {
 
@@ -423,20 +428,15 @@ border: 1px solid var(--light-blue);
     font-family: monospace;
     display: flex;
     align-items: center;
+    margin-top: 0px;
 
+    
 }
 
 #color-mode::before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f042";
-    font-weight: 900; 
-    display: inline-block;
-     font-style: normal; 
-     font-variant: normal; 
-     text-rendering: auto; 
-     -webkit-font-smoothing: antialiased;
-     font-size: 1.3em !important;
-     margin-right: 50000px;
+    content: var(--sun);
+    margin: 10px 10px;
+    transform: translateY(2px);
 
     
 

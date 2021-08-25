@@ -7,7 +7,7 @@ const minimize = document.getElementById('minimize')
 
 avatar.addEventListener('click', check)
 // dark.addEventListener('click', dark_mode)
-navoptions.addEventListener('click', border)
+document.getElementById('about').addEventListener('click', border)
 color_mode.addEventListener('click', color_change)
 // minimize.addEventListener('click', () => {
 //     document.querySelector('.nav-bar').style.animation = "collapse linear 0.2s"
@@ -24,7 +24,8 @@ function color_change() {
     document.getElementById('nav-bar').style.background = 'var(--dark-grey)';
     document.title = "tron975 (Light) | Website";
     document.body.style.animation = "opacity 2s";
-    color_mode.innerHTML = "Enable Dark Mode"
+    color_mode.innerHTML = "Enable Dark Mode";
+    color_mode.style.setProperty("--sun", "url(https://cdn.artofproblemsolving.com/attachments/b/4/df05480172598d82ecd57a1eda5689b02579c7.png)");
     } 
     
     else {
