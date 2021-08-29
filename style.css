@@ -8,12 +8,12 @@
 
 :root {
     --grey: hsl(0, 0%, 18.82%);
-    --light-blue: rgb(65, 166, 255);
+    --light-blue: 208 100% 63%;
     --popup-width: 200px; 
     --popup-height: 500px;
     --light-grey: hsl(0, 0%, 23.82%);
     --dark-grey: hsl(0, 0%, 11.82%);
-    --red: #CC0000;
+    --red: 0 100% 40%;
     --nav-bar-height: 50px;
     --transform: rotate(0deg);
     --sun: url("https://cdn.artofproblemsolving.com/attachments/0/9/79aee59ea5d8a7b2d56ed5542c88ed65b3dcb5.png");
@@ -126,7 +126,7 @@ right: 140px;
 }   
 
 #home:hover::before {
-    border-bottom: 3px solid var(--light-blue);
+    border-bottom: 3px solid hsl(var(--light-blue));
 }
 
 #home::after {
@@ -159,7 +159,7 @@ transform: scale(1);
 }   
 
 #about:hover::before {
-    border-bottom: 3px solid var(--light-blue);
+    border-bottom: 3px solid hsl(var(--light-blue));
 }
 #about::after {
     content: "About";
@@ -192,7 +192,7 @@ transform: scale(1);
 }   
 
 #help:hover::before {
-    border-bottom: 3px solid var(--light-blue);
+    border-bottom: 3px solid hsl(var(--light-blue));
 }
 
 #help::after {
@@ -217,6 +217,7 @@ transform: scale(1);
     }
 
 #minimize {
+    background: 
     position: absolute;
     top: 6px; 
     left: 8px;
@@ -243,7 +244,7 @@ cursor: pointer;
     }
 
 .avatar:active {
-border: 1px solid var(--light-blue);
+border: 1px solid hsl(var(--light-blue));
 }
 
 .pop-up {
@@ -259,13 +260,16 @@ border: 1px solid var(--light-blue);
     height: 500px; 
 
 
-    visibility: hidden;
+    display: none;
     border: 1px solid var(--light-grey);
-    border-radius: 3px;
+    border-radius: 5spx;
     font-size: 1.3em;
     overflow-y: hidden;
     overflow-x: ellipsis;
     resize: vertical;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    overflow: hidden;
 
 }
 
@@ -306,15 +310,15 @@ border: 1px solid var(--light-blue);
     width: 700px;   
     user-select: none;
     font-size: 3.7rem;
-    background-color: var(--light-blue); 
-    opacity: 0.8; 
+    background-color: hsl(var(--light-blue) / 0.8); 
+
 
 }
 
 .header:hover {
     cursor: default;
-    box-shadow: 5px 5px 5px var(--light-blue);
-    background-color: var(--light-blue);
+    box-shadow: 5px 5px 5px hsl(var(--light-blue));
+    background-color: hsl(var(--light-blue));
     opacity: 1;
     transform: scale(1.05)
 }
@@ -334,15 +338,15 @@ border: 1px solid var(--light-blue);
         width: 200px;
         user-select: none;  
         font-size: 1.5em; 
-        background-color: var(--red); 
+        background-color: hsl(var(--red)); 
         opacity: 0.8; 
 }
 
 .h2:hover {
-    background-color: var(--red);
+    background-color: hsl(var(--red));
     cursor: default;
     transform: scale(1.07);
-    box-shadow: 4px 4px 4px var(--red);
+    box-shadow: 4px 4px 4px hsl(var(--red));
     opacity: 1;
 }
 
@@ -355,7 +359,7 @@ border: 1px solid var(--light-blue);
     font-family: 'Orbitron' !important;
     font-weight: 600;
     font-size: 7rem;
-    color:rgb(65, 166, 255);
+    color: hsl(var(--light-blue));
     user-select: none;
     animation: steps ease-in-out 1.5s;
     transition: border-bottom ease 3.5s;
@@ -364,6 +368,9 @@ border: 1px solid var(--light-blue);
     margin-left: none;
     padding: 0px 24px;
     border: 5px solid transparent;
+    text-shadow: 
+    0.015em 0.015em 0.2em hsl(var(--light-blue)); 
+
 
 
 }
@@ -420,6 +427,16 @@ border: 1px solid var(--light-blue);
 
     to {
         height: 0%;
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 

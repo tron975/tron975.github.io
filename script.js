@@ -46,12 +46,13 @@ function border() {
 
 
 function check() {
-    if (popup.style.visibility == "hidden") {
-        popup.style.visibility = "visible"
+    if (popup.style.display == "none") {
+        popup.style.display = 'block';
+        popup.style.animation = "slide 0.3s"
     }
 
     else {
-        popup.style.visibility = "hidden";
+        popup.style.display = "none";
         
     }
 }
@@ -60,4 +61,8 @@ function dark_mode() {
     document.body.style.background = 'hsl(0, 0%, 11.82%)'; 
     document.body.style.animation = "opacity 2s";
     document.title = "tron975 (Dark) | Website";
+}
+
+function img() {
+    document.body.style.backgroundImage = 'url("favicon.ico")'  
 }
